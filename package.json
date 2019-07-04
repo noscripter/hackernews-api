@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "author": "Eric Lewis <elewis@boxy.co>",
   "description": "RESTful hackernews api",
-  "contributors": [ 
+  "contributors": [
     {
       "name": "Eric Lewis",
       "email": "elewis@boxy.co"
@@ -12,9 +12,15 @@
   "engines": {
     "node": "*"
   },
-  "dependencies":{
+  "dependencies": {
     "express": "*",
-    "jsdom"	 : "*",
-    "request": "*"
-  }
+    "jsdom": "*",
+    "request": "*",
+    "snyk": "^1.189.0"
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
